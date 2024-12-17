@@ -19,7 +19,7 @@ const Budgetbirthday = () => {
             playsInline
           ></video>
 
-          {/* Text Overlay */}
+          {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
 
           {/* Header Content */}
@@ -28,12 +28,13 @@ const Budgetbirthday = () => {
               Celebrate Your Birthday on a Budget
             </h1>
             <p className="text-lg text-gray-200">
-              Discover creative and affordable ideas for throwing an amazing
-              birthday party without breaking the bank. A little planning and a
-              touch of creativity can go a long way!
+              Discover creative and affordable ideas for throwing an amazing birthday
+              party without breaking the bank. A little planning and a touch of
+              creativity can go a long way!
             </p>
           </div>
         </div>
+
 
         {/* Blog Section */}
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
@@ -122,7 +123,7 @@ const Budgetbirthday = () => {
           {/* Tip 6 */}
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
             <img
-              src="/digital-invites.jpg"
+              src="/Digitalinvite.webp"
               alt="Digital Invitations"
               className="w-full h-48 object-cover"
             />
