@@ -1,0 +1,17 @@
+@keyframes birthdayAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-birthday-animation {
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ffc3a0);
+  background-size: 400% 400%;
+  animation: birthdayAnimation 15s ease infinite;
+}
