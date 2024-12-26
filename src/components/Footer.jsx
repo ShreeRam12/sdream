@@ -46,7 +46,7 @@ const Footer = () => {
             <div className='space-y-5 mt-5'>
               <p className="text-gray-400 flex items-center">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
-                Saligramam, Chennai, Tamil Nadu 600 093
+                Saligramam, Chennai, Tamil Nadu 600093
               </p>
               <p className="text-gray-400 flex items-center mt-2">
                 <FontAwesomeIcon icon={faPhone} className="mr-2" />
