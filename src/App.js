@@ -16,8 +16,16 @@ import Birthdaycakeinspirations from "./components/articles/Birthdaycakeinspirat
 import AboutUs from "./components/AboutUs";
 import Venue from "./components/Venue";
 import Decoration from "./components/Decoration";
-import Signages from "./components/Signages";
-
+import Sinages from "./components/Sinages";
+import Invitation from "./components/Invitation";
+import WelcomeService from "./components/WelcomeService";
+import Catering from "./components/Catering";
+import Photography from "./components/Photography";
+import Videography from "./components/Videography";
+import CakeArrangement from "./components/CakeArrangement";
+import Entertainment from "./components/Entertainment";
+import Gifting from "./components/Gifting";
+import PreVideo from "./components/PreVideo";
 function App() {
   return (
     <Router>
@@ -37,8 +45,19 @@ function App() {
           <Route path="/articles/birthdaycakeideas" element={<Birthdaycakeidea />} />
           <Route path="/articles/birthdaycakeinspirations" element={<Birthdaycakeinspirations />} />
           <Route path="/venue" element={<Venue />} />
+          <Route path="/invitation" element={<Invitation />} />
           <Route path="/decoration" element={<Decoration />} />
-          <Route path="/signages" element={<Signages />} />
+          <Route path="/sinages" element={<Sinages />} />
+          <Route path="/welcome-service" element={<WelcomeService />} />
+          <Route path="/sinages" element={<Sinages />} />
+          <Route path="/catering" element={<Catering />} />
+          <Route path="/photography" element={<Photography />} />
+          <Route path="/videography" element={<Videography />} />
+          <Route path="/cake-arrangement" element={<CakeArrangement />} />
+          <Route path="/entertainment" element={<Entertainment />} />
+          <Route path="/gifting" element={<Gifting />} />
+          <Route path="/prevideo" element={<PreVideo />} />
+
         </Routes>
       </div>
     </Router>

@@ -26,9 +26,9 @@ const Services = () => {
     },
     {
       id: 4,
-      title: "Signages",
-      image: "/Signages.webp",
-      link: "/signages"
+      title: "Sinages",
+      image: "/Sinages.webp",
+      link: "/sinages"
     },
     {
       id: 5,
