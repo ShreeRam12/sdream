@@ -56,7 +56,7 @@ function App() {
           <Route path="/cake-arrangement" element={<CakeArrangement />} />
           <Route path="/entertainment" element={<Entertainment />} />
           <Route path="/gifting" element={<Gifting />} />
-          <Route path="/prevideo" element={<PreVideo />} />
+          <Route path="/pre-video-making" element={<PreVideo />} />
 
         </Routes>
       </div>

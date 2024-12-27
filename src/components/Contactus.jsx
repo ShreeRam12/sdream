@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import './styles.css';
 const Contactus = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -40,12 +40,12 @@ const Contactus = () => {
   return (
     <>
       <Navbar />
-      <div className="relative w-full h-auto flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative flex flex-col justify-center items-center w-full h-auto overflow-hidden">
         {/* Background Video */}
         <div className="relative w-full h-96 overflow-hidden">
           {/* Background Video */}
           <video
-            className="absolute inset-0 w-full h-full object-cover z-0"
+            className="z-0 absolute inset-0 w-full h-full object-cover"
             src="/ContactUs_Video.mp4"
             autoPlay
             loop
@@ -54,11 +54,11 @@ const Contactus = () => {
           ></video>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+          <div className="z-10 absolute inset-0 bg-black bg-opacity-40"></div>
 
           {/* Header Content */}
-          <div className="relative z-20 w-full top-32 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="relative top-32 z-20 w-full text-center text-white bday_font">
+            <h1 className="mb-4 font-bold text-4xl md:text-7xl">
               Contact US
             </h1>
           </div>
@@ -66,17 +66,17 @@ const Contactus = () => {
       </div>
 
       {/* Main Flex Section */}
-      <div className="w-full  flex flex-col lg:flex-row gap-8 items-start px-4 py-8">
+      <div className="flex lg:flex-row flex-col items-start gap-8 px-4 py-8 w-full bday_font2">
         {/* Contact Form */}
-        <div className="w-full lg:w-1/2 bg-white bg-opacity-90 shadow-lg rounded-lg p-6">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <div className="bg-white bg-opacity-90 shadow-lg p-6 rounded-lg w-full lg:w-1/2">
+          <h2 className="mb-6 font-bold text-3xl text-gray-800">
             Get in Touch
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-700 font-medium mb-1"
+                className="block mb-1 font-medium text-gray-700 text-left"
               >
                 Your Name
               </label>
@@ -88,7 +88,7 @@ const Contactus = () => {
                 onChange={handleChange}
                 required
                 aria-label="Enter your name"
-                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                className="px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 w-full outline-none"
                 placeholder="e.g., John Doe"
               />
             </div>
@@ -96,7 +96,7 @@ const Contactus = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-medium mb-1"
+                className="block mb-1 font-medium text-gray-700 text-left"
               >
                 Your Email
               </label>
@@ -108,7 +108,7 @@ const Contactus = () => {
                 onChange={handleChange}
                 required
                 aria-label="Enter your email address"
-                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                className="px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 w-full outline-none"
                 placeholder="e.g., john@example.com"
               />
             </div>
@@ -116,7 +116,7 @@ const Contactus = () => {
             <div>
               <label
                 htmlFor="service"
-                className="block text-gray-700 font-medium mb-1"
+                className="block mb-1 font-medium text-gray-700 text-left"
               >
                 Select a Service
               </label>
@@ -127,7 +127,7 @@ const Contactus = () => {
                 onChange={handleChange}
                 required
                 aria-label="Select a service"
-                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                className="px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 w-full outline-none"
               >
                 <option value="" disabled>
                   Select a service
@@ -150,7 +150,7 @@ const Contactus = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-gray-700 font-medium mb-1"
+                className="block mb-1 font-medium text-gray-700 text-left"
               >
                 Your Message
               </label>
@@ -161,7 +161,7 @@ const Contactus = () => {
                 onChange={handleChange}
                 required
                 aria-label="Enter your message"
-                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                className="px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 w-full outline-none"
                 placeholder="Write your message here..."
                 rows="4"
               ></textarea>
@@ -170,7 +170,7 @@ const Contactus = () => {
             <div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="bg-blue-500 hover:bg-blue-600 focus:ring-opacity-50 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-500 w-full font-medium text-white focus:outline-none"
               >
                 Send Message
               </button>
@@ -180,11 +180,11 @@ const Contactus = () => {
 
         {/* Map Section */}
         <div className="w-full">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 text-black">
+          <h3 className="mb-4 font-bold text-2xl text-black text-gray-800">
             Our Location
           </h3>
           <iframe
-            className="w-full h-96 border rounded-md"
+            className="border rounded-md w-full h-96"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.9478932787965!2d80.1954949!3d13.054037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526653e2f2e9fd%3A0x948c44eac7de0b7d!2sSdream%20Saligramam!5e0!3m2!1sen!2sin!4v1698248765432!5m2!1sen!2sin"
             title="Our Location on Google Maps"
             allowFullScreen=""
