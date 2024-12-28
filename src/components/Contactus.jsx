@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import './styles.css';
+import "./styles.css";
 const Contactus = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +23,7 @@ const Contactus = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER; // Use environment variable
+    const whatsappNumber = "9025869175";
     const whatsappMessage = `Hello, my name is ${formData.name}. My email is ${formData.email}. I am interested in ${formData.service}. Message: ${formData.message}`;
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -36,7 +36,6 @@ const Contactus = () => {
     // Reset the form
     setFormData({ name: "", email: "", message: "", service: "" });
   };
-
   return (
     <>
       <Navbar />
@@ -58,9 +57,7 @@ const Contactus = () => {
 
           {/* Header Content */}
           <div className="relative top-32 z-20 w-full text-center text-white bday_font">
-            <h1 className="mb-4 font-bold text-4xl md:text-7xl">
-              Contact US
-            </h1>
+            <h1 className="mb-4 font-bold text-4xl md:text-7xl">Contact US</h1>
           </div>
         </div>
       </div>
@@ -180,9 +177,7 @@ const Contactus = () => {
 
         {/* Map Section */}
         <div className="w-full">
-          <h3 className="mb-4 font-bold text-2xl text-black text-gray-800">
-            Our Location
-          </h3>
+          <h3 className="mb-4 font-bold text-2xl text-black">Our Location</h3>
           <iframe
             className="border rounded-md w-full h-96"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.9478932787965!2d80.1954949!3d13.054037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526653e2f2e9fd%3A0x948c44eac7de0b7d!2sSdream%20Saligramam!5e0!3m2!1sen!2sin!4v1698248765432!5m2!1sen!2sin"
