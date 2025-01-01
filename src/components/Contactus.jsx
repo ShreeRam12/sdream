@@ -19,23 +19,37 @@ const Contactus = () => {
     }));
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const whatsappNumber = "9025869175";
-    const whatsappMessage = `Hello, my name is ${formData.name}. My email is ${formData.email}. I am interested in ${formData.service}. Message: ${formData.message}`;
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, "_blank");
-
-    // Reset the form
-    setFormData({ name: "", email: "", message: "", service: "" });
+  
+    try {
+      const response = await fetch("http://127.0.0.1:5000/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        alert(data.message);
+  
+        // Open WhatsApp (optional)
+        window.open(data.whatsapp_url, "_blank");
+  
+        // Reset the form
+        setFormData({ name: "", email: "", message: "", service: "" });
+      } else {
+        alert("Something went wrong. Please try again!");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("Error submitting the form. Please try again later.");
+    }
   };
+  
   return (
     <>
       <Navbar />
